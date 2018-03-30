@@ -22,12 +22,12 @@ open class UtilisateurServiceImpl: UtilisateurService {
     override fun receiveUtilisateur(utilisateur:ByteArray){
 
         val parsedMessage = JSON.readValue(utilisateur, String::class.java)
-        val u=JSON.readValue(parsedMessage, Utilisateur::class.java)
-        logger.info("Kotlin received: " + u)
+        val utilisateur=JSON.readValue(parsedMessage, Utilisateur::class.java)
+        logger.info("Kotlin received: " + utilisateur)
 
 
-        utilisateurRepository.save(u)
-       logger.info("Kotlin added: " + u)
+        utilisateurRepository.save(utilisateur)
+       logger.info("Kotlin added: " + utilisateur)
     }
 
 
