@@ -23,11 +23,11 @@ open class UtilisateurServiceImpl: UtilisateurService {
 
         val parsedMessage = JSON.readValue(utilisateur, String::class.java)
         val utilisateur=JSON.readValue(parsedMessage, Utilisateur::class.java)
-        logger.info("Kotlin received: " + utilisateur)
+        logger.info("Utilisateur received: " + utilisateur)
 
 
         utilisateurRepository.save(utilisateur)
-       logger.info("Kotlin added: " + utilisateur)
+       logger.info("Utilisateur  added: " + utilisateur)
     }
 
 
